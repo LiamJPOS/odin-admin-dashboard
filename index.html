@@ -7,24 +7,56 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="sidebar">Dashboard</div>
-    <header class="header">Header</header>
-    <main class="main">
-        <div class="projects">
-            <h2 class="projects--header">Your Projects</h2>
-            <div class="projects--cards-container">
-                <!-- Template for card, hidden when 0 projects in user's stack -->
-                <div class="card">
-                    <h3 class="card--title">Template Header</h3>
-                    <p class="card--description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, expedita accusantium. Suscipit delectus ad iste voluptatibus error maxime perspiciatis alias, officiis expedita a cupiditate laboriosam aspernatur dolores nulla consequatur fugiat?</p>
-                    <div class="card--icons">Icons</div>
+    <div class="page">
+        <aside class="sidebar secondary">
+            <a class="sidebar--header" href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="sidebar--monogram" height="50" width="50">
+                    <path d="M2 2V22H22V2H2M20 12H16V16H20V20H16V16H12V20H8V16H4V12H8V8H4V4H8V8H12V4H16V8H20V12M16 8V12H12V8H16M12 12V16H8V12H12Z" />
+                </svg>
+                <span class="sidebar--wordmark">Dashboard</span>
+            </a>
+            <div class="sidebar--main-items">
+                <ul>
+                    <li><span>icon</span> <span>Home</span></li>
+                    <li><span>icon</span> <span>Profile</span></li>
+                    <li><span>icon</span> <span>Messages</span></li>
+                    <li><span>icon</span> <span>History</span></li>
+                    <li><span>icon</span> <span>Tasks</span></li>
+                    <li><span>icon</span> <span>Communities</span></li>
+                </ul>
+            </div>
+            <div class="sidebar--bottom-items">
+                <ul>
+                    <li><span>icon</span> <span>Settings</span></li>
+                    <li><span>icon</span> <span></span>Support</li>
+                    <li><span>icon</span> <span></span>Privacy</li>
+                </ul>
+            </div>
+
+
+        </aside>
+        <header class="header">Header</header>
+        <main class="main tertiary">
+            <div class="projects">
+                <h2 class="projects--header">Your Projects</h2>
+                <div class="projects--cards-container">
+                    <!-- Template for card, hidden when 0 projects in user's stack -->
+                    <div class="card">
+                        <h3 class="card--title">Template Header</h3>
+                        <p class="card--description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, expedita accusantium. Suscipit delectus ad iste voluptatibus error maxime perspiciatis alias, officiis expedita a cupiditate laboriosam aspernatur dolores nulla consequatur fugiat?</p>
+                        <div class="card--icons">Icons</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <aside class="aside">
-            <div class="announcements"></div>
-            <div class="trending"></div>
-        </aside>
-    </main>
+            <aside class="aside">
+                <div class="announcements">
+                    <h2 class="announcements--header">Announcements</h2>
+                </div>
+                <div class="trending">
+                    <h2 class="trending--header">Trending</h2>
+                </div>
+            </aside>
+        </main>
+    </div>
 </body>
 </html>
