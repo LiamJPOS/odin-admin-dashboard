@@ -1,0 +1,122 @@
+/* Reset */
+
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* dark mode user-agent-styles */
+/* html {
+  color-scheme: dark light;
+}  */
+
+/* min body height */
+body {
+  min-height: 100vh;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit; /* Inherit the color from the parent element */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Remove visited link styling */
+a:visited {
+  color: inherit; /* Ensure visited links inherit the same color */
+  text-decoration: none; /* Remove underline for visited links */
+}
+
+/* Colours */
+
+:root {
+  --primary-color: #F5F5F5; /* Whitish */
+  --secondary-color: #8A9A5B; /* Moss Green */
+  --tertiary-color: #D35400; /* Autumn Orange */
+  --on-primary-color: #2E2E2E; /* Dark Charcoal */
+  --on-secondary-color: #FFFFFF; /* White */
+  --on-tertiary-color: #FDFEFE; /* Light Ivory */
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--on-primary-color);
+}
+
+.secondary {
+  background-color: var(--secondary-color);
+  color: var(--on-secondary-color);
+}
+
+.tertiary {
+  background-color: var(--tertiary-color);
+  color: var(--on-tertiary-color);
+}
+
+/*  */
+
+.page > * {
+    border: 2px solid black;
+}
+
+.page {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 
+    [sidebar-start] 1fr
+    [sidebar-end header-start main-start] 4fr
+    [header-end main-end];
+    grid-template-rows: 
+    [sidebar-start header-start] 1fr
+    [header-end main-start] 4fr
+    [sidebar-end main-end];
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.sidebar--monogram {
+  fill: var(--on-secondary-color);
+}
+
+.sidebar--header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.sidebar--wordmark {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header {
+    grid-area: header
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
