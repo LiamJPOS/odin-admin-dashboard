@@ -75,11 +75,7 @@ body {
   color: var(--on-tertiary-color);
 }
 
-/*  */
-
-.page > * {
-    border: 2px solid black;
-}
+/* Content */
 
 .page {
     height: 100vh;
@@ -100,7 +96,6 @@ body {
     align-content: start;
     gap: 3rem;
 }
-
 
 .sidebar--header {
   display: flex;
@@ -130,8 +125,60 @@ body {
 } 
  
 .header {
-    grid-area: header
+    grid-area: header;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    gap: 1rem;
+    margin: 1rem 4rem 0.5rem 2rem;
 }
+
+.header--upper, .header--nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10rem;
+}
+
+.header--search-bar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.header--search-input {
+  background-color: var(--tertiary-color);
+  color: var(--on-tertiary-color);
+  border-color: transparent;
+  border-radius: 40px;
+  box-shadow: none;
+  border: none;
+  flex-grow: 1;
+  padding: 0.1rem;
+  padding-left: 1rem;
+}
+
+/* Make border color on focus another color ask Ryan */
+
+.header--user-details {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+ }
+
+.header--nav-buttons {
+  display: flex;
+  gap: 1rem;
+  border: 1px solid black;
+
+}
+
+.nav--button {
+  background-color: var(--secondary-color);
+  color: var(--on-secondary-color);
+  flex-grow: 1;
+}
+
 
 .main {
     grid-area: main;
