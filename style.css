@@ -45,6 +45,10 @@ a:visited {
   text-decoration: none; /* Remove underline for visited links */
 }
 
+li {
+  list-style-type: none;
+}
+
 /* Colours */
 
 :root {
@@ -92,24 +96,39 @@ body {
 
 .sidebar {
     grid-area: sidebar;
+    display: grid;
+    align-content: start;
+    gap: 3rem;
 }
 
-.sidebar--monogram {
-  fill: var(--on-secondary-color);
-}
 
 .sidebar--header {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin: 1rem;
+  align-self: start;
+  justify-self: start;
+}
+
+.sidebar--monogram {
+  fill: var(--on-secondary-color);
 }
 
 .sidebar--wordmark {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
+.sidebar ul {
+  fill: var(--on-secondary-color); /*icons color*/
+  display: grid;
+  gap: 1rem;
+  margin-left: 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+} 
+ 
 .header {
     grid-area: header
 }
