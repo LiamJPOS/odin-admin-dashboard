@@ -77,6 +77,10 @@ body {
 
 /* Content */
 
+html {
+  font-size: 16px; /* This means 1rem = 16px */
+}
+
 .page {
     height: 100vh;
     display: grid;
@@ -129,7 +133,7 @@ body {
     display: grid;
     grid-template-rows: 1fr 2fr;
     gap: 1rem;
-    margin: 1rem 4rem 0.5rem 2rem;
+    margin: 1rem 4rem 1rem 2rem;
 }
 
 .header--upper, .header--nav {
@@ -137,6 +141,15 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 10rem;
+}
+
+
+.header--handle-section {
+  display: grid;
+  grid-template-areas: 
+  "avatar greeting" 
+  "avatar user-name" ;
+  gap: 1rem;
 }
 
 .header--search-bar {
@@ -164,19 +177,67 @@ body {
   display: flex;
   gap: 1rem;
   align-items: center;
- }
+}
+
+.header--user-avatar {
+  border-radius: 100%;
+  width: 2.5rem;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  background-image: url('/Images/default-user.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: transparent;
+}
+
+.header--handle-avatar {
+  grid-area: avatar;
+  width: 4rem;
+}
+
+.header--user-avatar:not(.header--handle-avatar){
+  cursor: pointer;
+}
+
+.header--user-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.header--greeting {
+  grid-area: greeting;
+  font-weight: bold;
+  font-size: 0.8rem;
+  align-self: end;
+}
+
+.header--user-handle {
+  grid-area: user-name;
+  font-size: 1.5rem;
+  margin-top: -0.6rem;
+}
 
 .header--nav-buttons {
   display: flex;
-  gap: 1rem;
-  border: 1px solid black;
-
+  gap: 2rem;
 }
 
 .nav--button {
-  background-color: var(--secondary-color);
-  color: var(--on-secondary-color);
-  flex-grow: 1;
+  padding: 0.625rem 1.25rem; /* Equivalent to 10px 20px */
+  font-size: 1rem; /* Equivalent to 16px */
+  font-weight: bold;
+  line-height: 1.5; /* Ensures the text height aligns well within the padding */
+  border: none; /* Remove default border */
+  border-radius: 40px; 
+  background-color: var(--secondary-color); /* Button background color */
+  color: var(--on-secondary-color); /* Button text color */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  display: inline-block; /* Ensure the button respects padding and vertical alignment */
+  vertical-align: middle; /* Vertically align the text */
+  text-align: center; /* Center text horizontally */
+  width: 6rem;
 }
 
 
