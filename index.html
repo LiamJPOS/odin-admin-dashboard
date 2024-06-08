@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <script src="/script.js" defer></script>
+    
 </head>
 <body>
     <div class="page">
@@ -78,15 +80,15 @@
                 </div>
                 <div class="header--user-details">
                     <span class="header--notifications">bell-icon</span>
-                    <button class="header--user-avatar"></button>
-                    <span class="header--user-name">User name</span>
+                    <button class="header--user-avatar avatar"></button>
+                    <span class="header--user-name" id="user-name">User name</span>
                 </div>
             </div>
             <nav class="header--nav">
                 <div class="header--handle-section">
-                    <button class="header--handle-avatar header--user-avatar"></button>
+                    <button class="header--handle-avatar avatar"></button>
                     <p class="header--greeting">Hi There,</p>
-                    <h1 class="header--user-handle header--user-name">User Name (@userhandle)</h1>
+                    <h1 class="header--user-handle header--user-name" id="user-handle">User Name (@userhandle)</h1>
                 </div>
                 <div class="header--nav-buttons">
                     <button class="nav--button">New</button>
@@ -99,22 +101,37 @@
 
         <main class="main tertiary">
             <div class="projects">
-                <h2 class="projects--header">Your Projects</h2>
-                <div class="projects--cards-container">
+                <h2 class="projects--header main-header">Your Projects</h2>
+                <div class="projects--cards-container" id="project-card-container">
                     <!-- Template for card, hidden when 0 projects in user's stack -->
-                    <div class="card">
-                        <h3 class="card--title">Template Header</h3>
-                        <p class="card--description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, expedita accusantium. Suscipit delectus ad iste voluptatibus error maxime perspiciatis alias, officiis expedita a cupiditate laboriosam aspernatur dolores nulla consequatur fugiat?</p>
-                        <div class="card--icons">Icons</div>
-                    </div>
+                    <!-- <div class="projects--card primary">
+                        <h3 class="projects--card-title">Template Header</h3>
+                        <p class="projects--card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, expedita accusantium. Suscipit delectus ad iste voluptatibus error maxime perspiciatis alias, officiis expedita a cupiditate laboriosam aspernatur dolores nulla consequatur fugiat?</p>
+                        <div class="projects--card-icons">Icons</div>
+                    </div> -->
                 </div>
             </div>
-            <aside class="aside">
+            <aside class="main--aside">
                 <div class="announcements">
-                    <h2 class="announcements--header">Announcements</h2>
+                    <h2 class="announcements--header main-header">Announcements</h2>
+                    <div class="announcements--card primary">
+                        <div class="announcements--card-section">
+                            <h3 class="announcements--card-section-title">Test Announcement</h3>
+                            <p class="announcements--card-section-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, facere accusantium. Perspiciatis error sequi, velit soluta at hic vitae quis, enim, voluptatum nesciunt impedit laudantium unde. Asperiores temporibus odio maiores.</p>
+                            <hr class="announcements--card-section-line">
+                        </div>
+                    </div>
                 </div>
                 <div class="trending">
-                    <h2 class="trending--header">Trending</h2>
+                    <h2 class="trending--header main-header">Trending</h2>
+                    <div class="trending--card primary">
+                        <div class="trending--project">
+                            <button class="trending--project-avatar avatar"></button>
+                            <p class="trending--project-user-handle">@user</p>
+                            <p class="trending--project-title">Project Name</p>
+                        </div>
+
+                    </div>
                 </div>
             </aside>
         </main>
