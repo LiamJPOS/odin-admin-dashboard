@@ -82,10 +82,10 @@ body, .primary {
 
 /* Content */
 
-html {
+html body {
+  font-family: 'Roboto', sans-serif;
   font-size: 16px; /* This means 1rem = 16px */
 }
-
 
 .page {
     height: 100vh;
@@ -151,7 +151,6 @@ html {
   align-items: center;
   gap: 10rem;
 }
-
 
 .header--handle-section {
   display: grid;
