@@ -1,5 +1,5 @@
 let userData;
-let currentUser = 2
+let currentUser = 0
 
 // Fetch JSON data once
 fetch('/users.json')
@@ -33,6 +33,10 @@ function manipulateData() {
         let card = document.createElement("div");
         card.setAttribute('class', 'projects--card primary');
 
+        let cardSide = document.createElement("div");
+        cardSide.setAttribute("class", "projects--card-side accent")
+        card.appendChild(cardSide)
+
         let cardUpper = document.createElement("div");
         cardUpper.setAttribute("class", "projects--card-upper");
         
@@ -48,10 +52,10 @@ function manipulateData() {
 
         card.appendChild(cardUpper);
 
-        let icons = document.createElement("div");
-        icons.setAttribute('class', 'projects--card-icons');
-        icons.textContent = "Icons";
-        card.appendChild(icons);
+        let cardLower = document.createElement("div");
+        cardLower.setAttribute('class', 'projects--card-lower');
+        cardLower.textContent = "Icons";
+        card.appendChild(cardLower);
 
         projectCardContainer.appendChild(card);
     }
