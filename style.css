@@ -340,7 +340,6 @@ html body {
 }
 
 .announcements--title {
-
   font-weight: bold;
   padding-bottom: 0.2rem;
   font-size: 0.9rem;
@@ -354,16 +353,32 @@ html body {
   font-size: 0.8rem
 }
 
+.trending--card {
+  display: grid;
+  gap: 1.5rem;
+}
 
+.trending--section {
+  display: grid;
+  grid-template-areas: 
+  "avatar handle" 
+  "avatar project-name" ;
+  justify-content: start;
+  column-gap: 1rem;
+} 
 
+.trending--project-avatar {
+  grid-area: avatar;
+}
 
+.trending--project-user {
+  grid-area: handle;
+}
 
-
-
-
-
-
-
+.trending--project-title {
+  grid-area: project-name;
+  color: darkgray;
+}
 
 
 
