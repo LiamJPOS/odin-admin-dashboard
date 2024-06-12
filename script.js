@@ -109,7 +109,6 @@ function displayLastAnnouncements() {
     }
     //Remove extra line break
     announcementsContainer.removeChild(announcementsContainer.lastElementChild)
-
-
+    
 }
 
