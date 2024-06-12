@@ -51,9 +51,32 @@ function displayUserProjects() {
 
         let cardLower = document.createElement("div");
         cardLower.setAttribute('class', 'projects--card-lower');
-        cardLower.textContent = "Icons";
-        card.appendChild(cardLower);
 
+        const iconPaths = {
+            "star": "Images/star-plus-outline.svg",
+            "eye": "Images/eye-plus-outline.svg",
+            "fork": "Images/source-fork.svg" 
+        }
+
+        for (let key in iconPaths) {
+            fetch(iconPaths[key])
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(svgData => {
+                    const svgWrapper = document.createElement('div');
+                    svgWrapper.innerHTML = svgData;
+                    const svgElement = svgWrapper.firstElementChild;
+                    svgElement.setAttribute("class", "projects--icons")
+                    cardLower.appendChild(svgElement);
+                })
+                .catch(error => console.error('Error fetching SVG:', error));
+        }
+
+        card.appendChild(cardLower);
         projectCardContainer.appendChild(card);
     }
 }

@@ -329,6 +329,7 @@ html body {
   padding-top: 1.8rem;
   padding-right: 1.5rem;
   padding-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
 .projects--card-upper > h3 {
@@ -345,10 +346,17 @@ html body {
 }
 
 .projects--card-lower {
+  display: flex;
+  gap: 2rem;
   align-self: flex-end;
-  padding-left: 1rem;
   padding-right: 1.8rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.projects--icons {  
+  height: 2rem;
+  width: auto;
+  display: block;
 }
 
 .announcements--card {
