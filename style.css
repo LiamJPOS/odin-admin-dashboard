@@ -118,6 +118,8 @@ html body {
 
 .sidebar--monogram {
   fill: var(--on-secondary-color);
+  height: 3.5rem;
+  width: 3.5rem;
 }
 
 .sidebar--wordmark {
@@ -126,20 +128,31 @@ html body {
 }
 
 .sidebar ul {
-  fill: var(--on-secondary-color); /*icons color*/
   display: grid;
   gap: 1rem;
-  margin-left: 2rem;
+  padding-left: 2rem;
   font-size: 1.3rem;
   font-weight: bold;
 } 
+
+.sidebar a {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sidebar--icon {
+  fill: var(--on-secondary-color); /*icons color*/
+  height: 2rem;
+  width: auto;
+}
  
 .header {
     grid-area: header;
     display: grid;
     grid-template-rows: 1fr 2fr;
     gap: 1rem;
-    /* margin: 1rem 4rem 1rem 2rem; */
     box-shadow: 0 5px 6px -1px rgba(0, 0, 0, 0.2);
     position: relative;
     padding: 1rem 4rem 1rem 2rem;
@@ -165,6 +178,11 @@ html body {
   gap: 1rem;
   align-items: center;
   flex-grow: 1;
+}
+
+.header--search-icon, .header--notifications {
+  height: 2rem;
+  width: auto;
 }
 
 .header--search-input {
