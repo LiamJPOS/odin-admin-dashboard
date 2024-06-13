@@ -1,5 +1,5 @@
 let userData;
-let currentUser = 0;
+let currentUser = 1;
 let announcementData;
 
 fetch('/users.json')
